@@ -7,9 +7,9 @@ CAA_PRINT_STDOUT:True
 CAA_HTML_OUTPUT:False
 #File name for interim and final HTML results (if enabled) [Default: /var/www/results.html]
 CAA_HTML_FILE:/var/www/results.html
-#Report interim status to HTML file (file enabled) every X records [Default: 500]
+#Report interim status to HTML file (if enabled) every X records [Default: 500]
 CAA_HTML_REPORT_FREQUENCY : 500
-#Output valid CAA records to text file? [Default, False]
+#Output valid CAA records to text file? [Default: False]
 CAA_VALID_RECORD_OUTPUT:False
 #File name PREFIX for list of domains that DO contain CAA records [Default: caarecords]
 CAA_VALID_RECORD_FILE_PREFIX:caarecords
@@ -27,7 +27,7 @@ CENSYS_FILE : alexa-results
 
 [twitter]
 #Auto-Tweet the results? [Default: False]
-TWITTER_OUTPUT: True 
+TWITTER_OUTPUT: False 
 # Get the following information from apps.twitter.com
 TWITTER_APP_KEY : putyourtwitterappkeyhere
 TWITTER_APP_SECRET : putyourtwitterappsecrethere
