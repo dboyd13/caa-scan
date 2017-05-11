@@ -1,0 +1,37 @@
+[caa-scan]
+#Limit scan to X domains in list, set to 0 to run the full set from Censys file [Default: 0]
+CAA_SCAN_LIMIT : 0
+#Show each result in STDOUT [Default: True]
+CAA_PRINT_STDOUT:True
+#Output interim and final results to HTML file? [Default: False]
+CAA_HTML_OUTPUT:False
+#File name for interim and final HTML results (if enabled) [Default: /var/www/results.html]
+CAA_HTML_FILE:/var/www/results.html
+#Report interim status to HTML file (file enabled) every X records [Default: 500]
+CAA_HTML_REPORT_FREQUENCY : 500
+#Output valid CAA records to text file? [Default, False]
+CAA_VALID_RECORD_OUTPUT:False
+#File name PREFIX for list of domains that DO contain CAA records [Default: caarecords]
+CAA_VALID_RECORD_FILE_PREFIX:caarecords
+
+[censys]
+#Censys.io API end-point [Default: https://www.censys/io/api/v1]
+CENSYS_API_URL : https://www.censys.io/api/v1
+#Get the following information from censys/io/account
+CENSYS_UID : putyourcensysuidhere
+CENSYS_SECRET : putyourcensyssecrethere
+#Specify the Censys SERIES to query [Default:443-https-tls-alexa-top1mil]
+CENSYS_SERIES : 443-https-tls-alexa_top1mil
+#Specify the latest Censys FILE to download from the series [Default:alexa-results]
+CENSYS_FILE : alexa-results
+
+[twitter]
+#Auto-Tweet the results? [Default: False]
+TWITTER_OUTPUT: True 
+# Get the following information from apps.twitter.com
+TWITTER_APP_KEY : putyourtwitterappkeyhere
+TWITTER_APP_SECRET : putyourtwitterappsecrethere
+TWITTER_TOKEN : putyourtwitteroauthtokenhere
+TWITTER_TOKEN_SECRET : putyourtwitteroauthtokensecrethere
+#Hash tags to append to tweet [Default: #CAA #DNS]
+TWITTER_HASH_TAGS : #CAA #DNS
