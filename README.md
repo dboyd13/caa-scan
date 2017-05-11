@@ -23,13 +23,33 @@ See [this blog post](https://darranboyd.wordpress.com/2017/04/18/dns-caa-record-
 
 **Installation:**
 
-- copy config-sample.ini to config.ini
+- git clone this repo
+- copy config-sample to config.ini
 - Update config.ini with Censys.io API details
 - Update config.ini with Twitter API details (optional)
 
 **Usage:**
 
 `python caa-scan.py [config-file]`
+
+**Example:**
+
+`$ python caa-scan.py config-test.ini                                                                                                                                                           
+[-] Config: file config-test.ini specified as argument, will try use that                                                                                                                               
+[-] Censys API: Determining latest dataset for 443-https-tls-alexa_top1mil                                                                                                                              
+[-] Censys API: Latest is 20170510T103351                                                                                                                                                               
+[-] Censys API: Latest is SHA256: 9a44eacb6316e4dcf2e0e02e784a0d21e621a359926d3a862b57a551046c09d3                                                                                                      
+[-] Local file SHA256: 9a44eacb6316e4dcf2e0e02e784a0d21e621a359926d3a862b57a551046c09d3                                                                                                                 
+[-] Local file hash matches - already have the latest dataset                                                                                                                                           
+[-] Running against 679003 HTTPS enabled of Alexa 1m sites                                                                                                                                                 
+ok.ru,NO CAA RECORD                                                                                                                                                                                     
+google.com.mx,NO CAA RECORD                                                                                                                                                                             
+amazon.co.jp,NO CAA RECORD                                                                                                                                                                              
+amazon.co.uk,NO CAA RECORD                                                                                                                                                                              
+amazon.in,NO CAA RECORD
+google.com,,0 issue "pki.goog"                                                                                                                                                                          
+google.com,,0 issue "pki.goog",0 issue "symantec.com"
+`
 
 **Program execution flow:**
 
