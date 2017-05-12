@@ -12,9 +12,12 @@ See [this blog post](https://darranboyd.wordpress.com/2017/04/18/dns-caa-record-
 *Software:*
 
 - python
-- hashlib - `sudo pip install hashlib`
+- pip (sudo apt-get install python-setuptools python-dev build-essential && sudo easy_install pip)
+- dnspython >= v1.12 - `sudo pip install dnspython -U`
+- requests - `sudo pip install requests`
 - lz4tools - `sudo pip install lz4tools`
 - twython - `sudo pip install twython`
+- hashlib - `sudo pip install hashlib`
 
 *API Keys:*
 
