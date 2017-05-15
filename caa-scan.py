@@ -235,7 +235,7 @@ if CAA_HTML_OUTPUT == True:
 if TWITTER_OUTPUT == True:
     percentage = (countcaa / (countcaa + countnocaa)) * 100
     tweet = 'CAA adoption is at %.3f%% for HTTPS enabled Alexa Top 1m sites. Scan total: %d | CAA records: %d %s' % (percentage, countcaa+countnocaa, countcaa, TWITTER_HASH_TAGS)
-    twitter = Twython(TWITTER_APP_KEY,APP_CENSYS_SECRET, TWITTER_TOKEN, TWITTER_TOKEN_CENSYS_SECRET)
+    twitter = Twython(TWITTER_APP_KEY,TWITTER_APP_SECRET, TWITTER_TOKEN, TWITTER_TOKEN_SECRET)
     twitter.update_status(status=tweet)
     print "[-] Tweeted: %s" % (tweet)
 print "[-] Done."
